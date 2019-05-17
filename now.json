@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "/api/twiml/come-bontho/index.js", "use": "@now/node" },
+    { "src": "/api/twiml/come-bontho-callback/index.js", "use": "@now/node" }
+  ]
+}

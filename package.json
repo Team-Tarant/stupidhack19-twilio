@@ -1,0 +1,12 @@
+{
+  "name": "stupidhack19-twilio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "twilio": "^3.31.0",
+    "xml-escape": "^1.1.0"
+  },
+  "devDependencies": {}
+}
