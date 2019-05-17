@@ -28,7 +28,7 @@ Create Twilio account, follow starter guides and choose your phone number, then 
 
 ```js
 const twilio = require('twilio')
-const client = twilio('<sid here>', '<token here>)
+const client = twilio('<sid here>', '<token here>')
 
 const twilioNumber = '<your twilio number here>'
 const targetNumber = '<phone number to call in E.164 format, e.g. +358401234567>'
