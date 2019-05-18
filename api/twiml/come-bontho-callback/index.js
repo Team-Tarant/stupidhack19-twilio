@@ -27,7 +27,7 @@ const postResponse = (sid, number, isDown) =>
 
 const main = async (req, res) => {
   const t = new VoiceResponse()
-  const sayEn = msg => t.say({ language: 'en-US', voice: 'man' }, msg)
+  const sayEn = msg => t.say({ voice: 'Polly.Joey' }, msg)
   const sayFi = msg => t.say({ language: 'fi-FI' }, msg)
 
   const { Digits, CallSid, To } = req.body

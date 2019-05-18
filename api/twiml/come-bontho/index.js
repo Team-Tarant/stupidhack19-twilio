@@ -16,7 +16,7 @@ module.exports = (req, res) => {
   const { name, place } = query
 
   const t = new VoiceResponse()
-  const sayEn = msg => t.say({ language: 'en-US', voice: 'man' }, msg)
+  const sayEn = msg => t.say({ voice: 'Polly.Joey' }, msg)
   const sayFi = msg => t.say({ language: 'fi-FI' }, msg)
 
   sayEn('Hey, this is')
