@@ -1,8 +1,8 @@
 const url = require('url')
 const xmlescape = require('xml-escape')
 const { VoiceResponse } = require('twilio').twiml
-const GATHER_ACTION_URL =
-  'https://stupidhack19-twilio.cxcorp.now.sh/api/twiml/come-bontho-callback'
+
+const GATHER_ACTION_URL = '/api/twiml/come-bontho-callback'
 
 module.exports = (req, res) => {
   const { query } = url.parse(req.url, true)
