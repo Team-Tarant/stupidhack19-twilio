@@ -4,8 +4,8 @@ const { VoiceResponse } = require('twilio').twiml
 
 const getRandomBeginning = () => {
   const beginnings = [
-    'Did you know that', 
-    'I just got a quick question', 
+    'Did you know that',
+    'I just got a quick question',
     'We are currently drinking, and we thought that'
   ]
   return beginnings[Math.floor(Math.random() * beginnings.length)]
@@ -16,7 +16,7 @@ module.exports = (req, res) => {
 
   if (!query.text) {
     res.writeHead(400)
-    res.end('name or place query params missing')
+    res.end('text is missing')
     return
   }
 
