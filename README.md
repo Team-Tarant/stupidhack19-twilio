@@ -2,6 +2,17 @@
 
 https://stupidhack19-twilio.cxcorp.now.sh
 
+## Env
+
+`BACKEND_URL` - URL of the backend API, used to store response in come-bontho-callback
+`BACKEND_API_KEY` - obvious
+
+Set these with
+- `now secret add stupidhack19-backend-url https://example.com`
+- `now secret add stupidhack19-backend-api-key asdfghjk1234567`
+
+(see now.json)
+
 ## Endpoints
 
 #### `GET /api/twiml/come-bontho?name=foo&place=bar`
