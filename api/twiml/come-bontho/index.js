@@ -19,7 +19,7 @@ module.exports = (req, res) => {
   const sayEn = msg => t.say({ voice: 'Polly.Joey' }, msg)
   const sayFi = msg => t.say({ language: 'fi-FI' }, msg)
 
-  sayEn('Hey, this is')
+  sayEn('Heyyy, this is')
   sayFi(` ${xmlescape(name)}.`)
   sayEn('Come drink with us at ')
   sayFi(` ${xmlescape(place)}`)

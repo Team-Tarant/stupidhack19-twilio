@@ -43,9 +43,7 @@ const main = async (req, res) => {
       'https://www.myinstants.com/media/sounds/mylongestyeahboyever.mp3'
     )
   } else {
-    sayEn('Thank you for subscribing to')
-    sayFi('bönthö')
-    sayEn('facts.')
+    sayEn('Vittu!!!')
   }
 
   res.writeHead(200, { 'Content-Type': 'text/xml; charset=utf-8' })
