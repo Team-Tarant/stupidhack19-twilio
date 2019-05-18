@@ -32,7 +32,7 @@ const main = async (req, res) => {
   const { Digits, CallSid } = req.body
   const isDown = Digits === '1'
 
-  postResponse(CallSid, isDown)
+  await postResponse(CallSid, isDown)
 
   if (isDown) {
     t.play(
