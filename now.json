@@ -2,7 +2,8 @@
   "version": 2,
   "builds": [
     { "src": "/api/twiml/come-bontho/index.js", "use": "@now/node" },
-    { "src": "/api/twiml/come-bontho-callback/index.js", "use": "@now/node" }
+    { "src": "/api/twiml/come-bontho-callback/index.js", "use": "@now/node" },
+    { "src": "/api/twiml/bontho-call/index.js", "use": "@now/node" }
   ],
   "env": {
     "BACKEND_URL": "@stupidhack19-backend-url",
