@@ -23,12 +23,20 @@ module.exports = (req, res) => {
   const { text } = query
 
   const t = new VoiceResponse()
-  const sayEn = msg => t.say({ language: 'en-US', voice: 'man' }, msg)
-
-  sayEn('Hello')
-  sayEn(getRandomBeginning())
-  sayEn(xmlescape(text))
-  sayEn('Goodbye')
+  const say = t.say({ voice: 'Polly.Joey' }, 'Hello')
+  say.ssmlProsody(
+    {
+      rate: '75%'
+    },
+    getRandomBeginning()
+  )
+  say.ssmlProsody(
+    {
+      rate: '75%'
+    },
+    xmlescape(text)
+  )
+  t.say({ voice: 'Polly.Joey' }, 'Goodbye')
 
   res.writeHead(200, { 'Content-Type': 'text/xml; charset=utf-8' })
   res.end(t.toString())
