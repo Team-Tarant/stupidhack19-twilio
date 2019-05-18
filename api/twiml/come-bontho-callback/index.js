@@ -11,7 +11,7 @@ const bodyParser = BodyParser.urlencoded({ extended: false })
  * @param {boolean} isDown
  * @returns {Promise<any>}
  */
-const postResponse = (sid, isDown) =>
+const postResponse = (sid, number, isDown) =>
   axios.request({
     method: 'POST',
     url: `${BACKEND_URL}/api/response`,
@@ -20,7 +20,8 @@ const postResponse = (sid, isDown) =>
     },
     data: {
       isDown,
-      sid
+      sid,
+      number
     }
   })
 
@@ -29,10 +30,10 @@ const main = async (req, res) => {
   const sayEn = msg => t.say({ language: 'en-US', voice: 'man' }, msg)
   const sayFi = msg => t.say({ language: 'fi-FI' }, msg)
 
-  const { Digits, CallSid } = req.body
+  const { Digits, CallSid, To } = req.body
   const isDown = Digits === '1'
 
-  await postResponse(CallSid, isDown)
+  await postResponse(CallSid, To, isDown)
 
   if (isDown) {
     t.play(
